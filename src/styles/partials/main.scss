@@ -6,10 +6,27 @@ html {
 body {
   font-family: $mainFont;
   color: $textMainColor;
+  background-color: $grey;
 }
 
 .container {
   max-width: 1170px;
   width: 100%;
   margin: 0 auto;
+
+  @include max("lg") {
+    padding: 0 45px;
+  }
+
+  @include max("sm") {
+    padding: 0 20px;
+  }
+}
+
+.first-block {
+  margin-top: 99px;
+
+  @include max("lg") {
+    margin-top: 79px;
+  }
 }

@@ -56,12 +56,11 @@
   }
 }
 
-// // Ховер
-// @mixin hover {
-//   @media (min-width: 1025px) {
-//     &:hover {
-//       @content;
-//       transition: $transition;
-//     }
-//   }
-// }
+// Ховер
+@mixin hover {
+  @media (min-width: 1080px) {
+    &:hover {
+      @content;
+    }
+  }
+}
