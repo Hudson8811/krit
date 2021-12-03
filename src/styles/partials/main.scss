@@ -1,0 +1,15 @@
+html {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+body {
+  font-family: $mainFont;
+  color: $textMainColor;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
