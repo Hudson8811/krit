@@ -1,0 +1,17 @@
+mixin services(content)
+  - classList = `${content.firstBlock?'first-block':''} ${content.mod?'bg-'+content.mod:''}`;
+  section.services(class=classList id=content.id?content.id:'services')
+    .container
+      .services-wrapper
+        h2.title.services__title=content.title
+
+        .services-grid
+          each card in content.cards
+            .services-card
+              .services-card__image
+                img(src=`images/${card.image.src}`, alt=card.image.alt?card.image.alt:card.title).services-card__image-item
+              
+              .services-card__content
+                h3.services-card__title=card.title
+
+                p.services-card__text=card.text
