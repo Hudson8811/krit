@@ -1,0 +1,7 @@
+mixin hero(content)
+  - classList = `${content.firstBlock?'first-block':''} ${content.mod?'bg-'+content.mod:''}`;
+  section.hero(class=classList)    
+    .container
+      .hero-wrapper
+        .hero-title
+          h1.title.hero-title__item!=content.title

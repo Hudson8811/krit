@@ -1,11 +1,20 @@
 extends ../layouts/default
 
+include ../partials/blocks/_hero
+
 block vars
   -
     const page = {
       title: 'Главная',
+      content: {
+        hero: {
+          firstBlock: true,
+          mod: 'cover',
+          title: '<span class="hero-title__item--bold">Инфраструктура</span> для телекоммуникаций',
+        },
+      },
     };
 
 block main
-  .container
+  +hero(page.content.hero)
     
