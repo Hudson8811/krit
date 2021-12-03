@@ -1,0 +1,30 @@
+.button {
+  display: inline-block;
+  padding: 12px 45px;
+  border-radius: 5px;
+  border: 1px solid $red;
+  text-decoration: none;
+  white-space: nowrap;
+  color: $white;
+  background-color: $red;
+  transition: $transition;
+  cursor: pointer;
+
+  @include hover {
+    border-color: $textMainColor;
+    color: $textMainColor;
+    background-color: $white;
+  }
+
+  &--secondary {
+    border-color: $textMainColor;
+    color: $textMainColor;
+    background-color: $white;
+
+    @include hover {
+      border-color: $red;
+      color: $white;
+      background-color: $red;
+    }
+  }
+}

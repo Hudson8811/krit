@@ -1,0 +1,14 @@
+mixin about(content)
+  - classList = `${content.firstBlock?'first-block':''} ${content.mod?'bg-'+content.mod:''}`;
+  section.about(class=classList id=content.id?content.id:'about')
+    .container
+      .about-wrapper(class=content.flipped?'about-wrapper--flipped':'')
+        .about-image
+          img(src=`images/${content.image.src}`, alt=content.image.alt?content.image.alt:'').about-image__item
+        
+        .about-content
+          h2.title.about-content__title=content.title
+
+          p.about-content__text=content.text
+
+          a(href=content.link.href?content.link.href:'#' class=content.link.secondary?'button--secondary':'').button.about-content__button=content.link.text

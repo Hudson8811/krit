@@ -1,6 +1,7 @@
 extends ../layouts/default
 
 include ../partials/blocks/_hero
+include ../partials/blocks/_about
 
 block vars
   -
@@ -12,9 +13,17 @@ block vars
           mod: 'cover',
           title: '<span class="hero-title__item--bold">Инфраструктура</span> для телекоммуникаций',
         },
+        about: {
+          id: 'about',
+          image: { src: 'about/about.jpg', alt: 'Телекоммуникационные вышки' },
+          title: 'О компании',
+          text: 'Группа компаний «Сервис-Телеком», независимый оператор инфраструктуры для компаний связи, сформирована путем объединения бизнесов лидера рынка Московского региона ООО «Сервис-Телеком» и ведущего игрока рынка Северо-Запада, первой в Российской Федерации независимой башенной компании ООО «Линк Девелопмент».',
+          link: { href: '#', text: 'Подробнее' },
+        }
       },
     };
 
 block main
   +hero(page.content.hero)
+  +about(page.content.about)
     
