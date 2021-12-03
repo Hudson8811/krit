@@ -1,0 +1,10 @@
+mixin cover(content)
+  - classList = `${content.firstBlock?'first-block':''} ${content.mod?'bg-'+content.mod:''}`;
+  section.cover(class=classList)
+    .container
+      .cover-wrapper
+        h2.title.cover__title=content.title
+
+        p.cover__text=content.text 
+
+        a(href=content.link.href?content.link.href:'#').link.link--regular.cover__link=content.link.text 
