@@ -12,6 +12,6 @@ mixin services(content)
                 img(src=`images/${card.image.src}`, alt=card.image.alt?card.image.alt:card.title).services-card__image-item
               
               .services-card__content
-                h3.services-card__title=card.title
+                h3.services-card__title!=card.title
 
                 p.services-card__text=card.text

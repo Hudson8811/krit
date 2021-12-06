@@ -21,6 +21,7 @@ function teamSlider() {
       1079: {
         spaceBetween: 30,
         slidesPerView: 4,
+        autoplay: false,
       },
     },
   });

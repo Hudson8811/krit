@@ -11,7 +11,7 @@
 
   &-title {
     max-width: 640px;
-    padding: 36px 38px;
+    padding: 32px 36px 38px;
     text-align: center;
     color: $textMainColor;
     background-color: $white;
@@ -36,8 +36,8 @@
       &--bold {
         display: block;
         font-weight: 700;
-        font-size: 60px;
-        line-height: 60px;
+        font-size: 62px;
+        line-height: 62px;
         text-transform: uppercase;
 
         @include max("md") {
@@ -56,5 +56,10 @@
         }
       }
     }
+  }
+
+  .title {
+    font-size: 40px;
+    line-height: 50px;
   }
 }

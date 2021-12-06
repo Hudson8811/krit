@@ -9,6 +9,6 @@ mixin about(content)
         .about-content
           h2.title.about-content__title=content.title
 
-          p.about-content__text=content.text
+          p.about-content__text!=content.text
 
           a(href=content.link.href?content.link.href:'#' class=content.link.secondary?'button--secondary':'').button.about-content__button=content.link.text

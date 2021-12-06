@@ -1,9 +1,12 @@
 .contacts {
-  padding: 38px 0 49px;
+  padding: 38px 0 43px;
 
   &-wrapper {
     display: flex;
-    justify-content: space-between;
+
+    @include max("lg") {
+      justify-content: space-between;
+    }
 
     @include max("md") {
       flex-wrap: wrap;
@@ -20,9 +23,17 @@
       font-size: 18px;
       line-height: 30px;
     }
+
+    &:not(:first-child) {
+      padding-top: 13px;
+    }
   }
 
   &-main {
+    @include min("lg") {
+      margin-right: 151px;
+    }
+
     @include max("md") {
       flex-basis: 100%;
       margin-bottom: 30px;
@@ -30,6 +41,10 @@
   }
 
   &-info {
+    @include min("lg") {
+      margin-right: 102px;
+    }
+
     @include max("md") {
       margin-right: 30px;
       margin-bottom: 30px;
@@ -60,6 +75,8 @@
   }
 
   &__emails {
+    margin-bottom: 7px;
+
     @include max("md") {
       margin-bottom: 23px;
     }
