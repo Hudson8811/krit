@@ -7,6 +7,7 @@ include ../partials/blocks/_services
 include ../partials/blocks/_solutions
 include ../partials/blocks/_news
 include ../partials/blocks/_team
+include ../partials/blocks/_map
 
 block vars
   -
@@ -172,6 +173,25 @@ block vars
             },
           ],
         },
+        map: {
+          id: 'map',
+          title: 'Наши объекты на карте',
+          link: 'https://yandex.ru/map-widget/v1/?um=constructor%3A67ad8a893a1f8e05830ef3fed5ed7bbf9f2e9f2b8e787fbbb7d3d8a81b24fa93&amp;source=constructor',
+          buttons: [
+            { 
+              download: true, 
+              secondary: true,
+              href: '#',
+              text: 'Скачать Excel',
+            },
+            { 
+              download: true, 
+              secondary: true,
+              href: '#',
+              text: 'Скачать KML',
+            },
+          ],
+        },
       },
     };
 
@@ -183,4 +203,5 @@ block main
   +solutions(page.content.solutions)
   +news(page.content.news)
   +team(page.content.team)
+  +map(page.content.map)
     

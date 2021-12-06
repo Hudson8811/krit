@@ -1,0 +1,18 @@
+mixin map(content)
+  - classList = `${content.firstBlock?'first-block':''} ${content.mod?'bg-'+content.mod:''}`;
+  section.map(class=classList id=content.id?content.id:'map')
+    .container
+      .map-wrapper
+        .map-heading
+          h2.title.map-heading__title=content.title
+
+          .map-heading__buttons
+            each button in content.buttons
+              if button.download
+                a(href=button.href?button.href:'#' class=button.secondary?'button--secondary':'' download).button.map-heading__button=button.text
+              else
+                a(href=button.href?button.href:'#' class=button.secondary?'button--secondary':'').button.map-heading__button=button.text
+
+
+        .map__container
+          iframe(src=content.link frameborder="0").map__item
