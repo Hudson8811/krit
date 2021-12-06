@@ -38,7 +38,7 @@
       transform: rotate(180deg);
 
       @include max("lg") {
-        left: -50px;
+        left: -44px;
       }
 
       @include max("sm") {
@@ -51,7 +51,7 @@
       right: -56px;
 
       @include max("lg") {
-        right: -50px;
+        right: -44px;
       }
 
       @include max("sm") {

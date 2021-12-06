@@ -1,0 +1,15 @@
+.footer {
+  padding: 8px 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  color: $white;
+  background-color: $black;
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
