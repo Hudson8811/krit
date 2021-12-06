@@ -8,7 +8,7 @@ mixin solutions(content)
         .solutions-grid
           each card in content.cards
             .solutions-card
-              .solutions-card__image
+              a(href=card.image.link?card.image.link:'#').solutions-card__image
                 img(src=`images/${card.image.src}`, alt=card.image.alt?card.image.alt:card.title).solutions-card__image-item
 
               .solutions-card__info

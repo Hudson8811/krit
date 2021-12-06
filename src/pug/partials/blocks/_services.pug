@@ -7,7 +7,7 @@ mixin services(content)
 
         .services-grid
           each card in content.cards
-            .services-card
+            a(href=card.link?card.link:'#').services-card
               .services-card__image
                 img(src=`images/${card.image.src}`, alt=card.image.alt?card.image.alt:card.title).services-card__image-item
               
