@@ -133,6 +133,10 @@
 
       &:not(:last-child) {
         margin-bottom: 3px;
+
+        @include max("md") {
+          margin-bottom: 10px;
+        }
       }
 
       &.active {
