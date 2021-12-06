@@ -59,7 +59,9 @@
   }
 
   .title {
-    font-size: 40px;
-    line-height: 50px;
+    @include min("md") {
+      font-size: 40px;
+      line-height: 50px;
+    }
   }
 }

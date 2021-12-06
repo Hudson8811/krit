@@ -38,8 +38,11 @@
   &__title {
     margin-bottom: 23px;
     font-weight: 500;
-    line-height: 52px;
     color: inherit;
+
+    @include min("md") {
+      line-height: 52px;
+    }
   }
 
   &__text {
