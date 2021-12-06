@@ -1,0 +1,21 @@
+mixin team(content)
+  - classList = `${content.firstBlock?'first-block':''} ${content.mod?'bg-'+content.mod:''}`;
+  section.team(class=classList id=content.id?content.id:'team')
+    .container
+      .team-wrapper
+        h2.title.section-title.team__title=content.title
+
+        .slider
+          .swiper.team-slider
+            .swiper-wrapper
+              each card in content.cards
+                .swiper-slide.team-card
+                  .team-card__image
+                    img(src=`images/${card.image.src}`, alt=card.image.alt?card.image.alt:`Фото ${card.name}`).team-card__image-item
+                  
+                  .team-card__content
+                    p.team-card__content-name=card.name
+                    p.team-card__content-text!=card.text
+          
+          +sliderButton('prev', 'team-slider__button')
+          +sliderButton('next', 'team-slider__button')

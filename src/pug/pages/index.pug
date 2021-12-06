@@ -6,6 +6,7 @@ include ../partials/blocks/_cover
 include ../partials/blocks/_services
 include ../partials/blocks/_solutions
 include ../partials/blocks/_news
+include ../partials/blocks/_team
 
 block vars
   -
@@ -124,6 +125,53 @@ block vars
             },
           ],
         },
+        team: {
+          id: 'team',
+          mod: 'grey',
+          title: 'Новости',
+          cards: [
+            {
+              image: { src: 'team/team-1.jpg', alt: '' },
+              name: 'Дмитрий Болотов',
+              text: 'Директор по GR и имущественным вопросам',
+            },
+            {
+              image: { src: 'team/team-2.jpg', alt: '' },
+              name: 'Дмитрий Болотов',
+              text: 'Директор по GR и имущественным вопросам',
+            },
+            {
+              image: { src: 'team/team-3.jpg', alt: '' },
+              name: 'Дмитрий Болотов',
+              text: 'Директор по GR и имущественным вопросам',
+            },
+            {
+              image: { src: 'team/team-4.jpg', alt: '' },
+              name: 'Дмитрий Болотов',
+              text: 'Директор по GR и имущественным вопросам',
+            },
+            {
+              image: { src: 'team/team-1.jpg', alt: '' },
+              name: 'Дмитрий Болотов',
+              text: 'Директор по GR и имущественным вопросам',
+            },
+            {
+              image: { src: 'team/team-2.jpg', alt: '' },
+              name: 'Дмитрий Болотов',
+              text: 'Директор по GR и имущественным вопросам',
+            },
+            {
+              image: { src: 'team/team-3.jpg', alt: '' },
+              name: 'Дмитрий Болотов',
+              text: 'Директор по GR и имущественным вопросам',
+            },
+            {
+              image: { src: 'team/team-4.jpg', alt: '' },
+              name: 'Дмитрий Болотов',
+              text: 'Директор по GR и имущественным вопросам',
+            },
+          ],
+        },
       },
     };
 
@@ -134,4 +182,5 @@ block main
   +services(page.content.services)
   +solutions(page.content.solutions)
   +news(page.content.news)
+  +team(page.content.team)
     

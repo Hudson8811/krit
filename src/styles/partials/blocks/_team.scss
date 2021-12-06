@@ -1,0 +1,36 @@
+.team {
+  padding: 38px 0 71px;
+
+  &-card {
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: inherit;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+
+    &__image {
+      margin-bottom: 14px;
+      width: 100%;
+      overflow: hidden;
+
+      &-item {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      font-weight: 500;
+
+      &-name {
+        margin-bottom: 6px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+  }
+}
