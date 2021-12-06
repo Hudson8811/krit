@@ -1,0 +1,17 @@
+mixin solutions(content)
+  - classList = `${content.firstBlock?'first-block':''} ${content.mod?'bg-'+content.mod:''}`;
+  section.solutions(class=classList id=content.id?content.id:'solutions')
+    .container
+      .solutions-wrapper
+        h2.title.solutions__title=content.title
+
+        .solutions-grid
+          each card in content.cards
+            .solutions-card
+              .solutions-card__image
+                img(src=`images/${card.image.src}`, alt=card.image.alt?card.image.alt:card.title).solutions-card__image-item
+
+              .solutions-card__info
+                span.solutions-card__title=card.title
+
+                a(href=card.link.href?card.link.href:'#' class=card.link.secondary?'button--secondary':'').button.solutions-card__button=card.link.text?card.link.text:'Посмотреть в 3D'

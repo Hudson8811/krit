@@ -4,6 +4,7 @@ include ../partials/blocks/_hero
 include ../partials/blocks/_about
 include ../partials/blocks/_cover
 include ../partials/blocks/_services
+include ../partials/blocks/_solutions
 
 block vars
   -
@@ -54,6 +55,28 @@ block vars
             },
           ],
         },
+        solutions: {
+          id: 'solutions',
+          mod: 'grey',
+          title: 'Решения',
+          cards: [
+            {
+              title: 'Башня',
+              link: { href: '#', text: 'Посмотреть в 3D' },
+              image: { src: 'solutions/solutions-1.jpg', alt: 'Башня' },
+            },
+            {
+              title: 'ОДН',
+              link: { href: '#', text: 'Посмотреть в 3D' },
+              image: { src: 'solutions/solutions-2.jpg', alt: 'ОДН' },
+            },
+            {
+              title: 'Смарт-столб',
+              link: { href: '#', text: 'Посмотреть в 3D' },
+              image: { src: 'solutions/solutions-3.jpg', alt: 'Смарт-столб' },
+            },
+          ],
+        },
       },
     };
 
@@ -62,4 +85,5 @@ block main
   +about(page.content.about)
   +cover(page.content.cover)
   +services(page.content.services)
+  +solutions(page.content.solutions)
     
