@@ -8,6 +8,7 @@ include ../partials/blocks/_solutions
 include ../partials/blocks/_news
 include ../partials/blocks/_team
 include ../partials/blocks/_map
+include ../partials/blocks/_contacts
 
 block vars
   -
@@ -192,6 +193,43 @@ block vars
             },
           ],
         },
+        contacts: {
+          id: 'contacts',
+          button: { href: '#', text: 'Реквизиты компании' },
+          info: {
+            title: 'Информация',
+            links: [
+              { href: "#about", text: "О компании" },
+              { href: "#services", text: "Услуги" },
+              { href: "#solutions", text: "Решения" },
+              { href: "#news", text: "Новости" },
+              { href: "#team", text: "Команда" },
+              { href: "#map", text: "Объекты на карте" },
+              { href: "#contacts", text: "Контакты" },
+            ],
+          },
+          emails: {
+            title: 'Электронная почта',
+            list: [ 'info@service-telecom.net', 'press@service-telecom.net' ],
+          },
+          addresses: {
+            title: 'Адрес',
+            list: [
+              {
+                text: '115184, Москва, ул. Пятницкая, д. 54, стр. 2',
+                tel: '+7 499 922 8553',
+              },
+              {
+                text: ' 197101, Санкт-Петербург, ул. Б. Монетная, д. 25',
+                tel: '+7 812 986 3333',
+              },
+              {
+                text: ' 603093, г. Нижний Новгород, ул. Родионова, д. 192Д',
+                tel: '+7 499 922 8553',
+              },
+            ],
+          },
+        },
       },
     };
 
@@ -204,4 +242,5 @@ block main
   +news(page.content.news)
   +team(page.content.team)
   +map(page.content.map)
+  +contacts(page.content.contacts)
     

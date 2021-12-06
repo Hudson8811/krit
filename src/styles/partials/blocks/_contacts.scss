@@ -1,0 +1,67 @@
+.contacts {
+  padding: 38px 0 49px;
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include max("md") {
+      flex-wrap: wrap;
+    }
+  }
+
+  &-section {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      margin-bottom: 14px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  &-main {
+    @include max("md") {
+      flex-basis: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  &-info {
+    @include max("md") {
+      margin-right: 30px;
+      margin-bottom: 30px;
+    }
+
+    @include max("sm") {
+      flex-basis: 100%;
+    }
+  }
+
+  &-logo {
+    width: 212px;
+  }
+
+  &-list {
+    &__item {
+      margin-bottom: 7px;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 22px;
+  }
+
+  &__button {
+    max-width: 212px;
+    padding: 13px 24px;
+  }
+
+  &__emails {
+    @include max("md") {
+      margin-bottom: 23px;
+    }
+  }
+}

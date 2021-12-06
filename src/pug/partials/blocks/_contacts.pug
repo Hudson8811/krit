@@ -1,0 +1,44 @@
+mixin contacts(content)
+  - classList = `${content.firstBlock?'first-block':''} ${content.mod?'bg-'+content.mod:''}`;
+  section.contacts(class=classList id=content.id?content.id:'contacts')
+    .container
+      if content.title
+        h2.title.section-title.contacts__title=content.title
+
+      .contacts-wrapper
+        - const innerTag = content.title?'h3':'h2';
+
+        .contacts-section.contacts-main
+          a(href="./").contacts-logo.contacts__logo
+            img(src="./images/base/logo.png", alt="КРИТ").contacts-logo__image
+          
+          a(href=content.button.href?content.button.href:'#' class=content.button.secondary?'button--secondary':'').button.contacts__button=content.button.text
+        
+        .contacts-section.contacts-info
+          #{innerTag}.contacts-section__title=content.info.title
+
+          ul.contacts-list.contacts-info__list
+            each link in content.info.links
+              li.contacts-list__item.contacts-info__item
+                a(href=link.href).link.contacts-list__link.contacts-info__link=link.text
+        
+        .contacts-section.contacts__group
+          .contacts-emails.contacts__emails
+            #{innerTag}.contacts-section__title=content.emails.title
+
+            ul.contacts-list.contacts-emails__list
+              each email in content.emails.list
+                li.contacts-list__item.contacts-emails__item
+                  a(href=`mailto:${email}`).link.contacts-list__link.contacts-emails__link=email
+          
+          .contacts-addresses
+            #{innerTag}.contacts-section__title=content.addresses.title
+
+            ul.contacts-list.contacts-addresses__list
+              each address in content.addresses.list
+                li.contacts-list__item.contacts-addresses__item
+                  p.contacts-addresses__text=address.text
+                    if address.tel
+                      span
+                        | , тел.:&nbsp;
+                      a(href=`tel:${address.tel.replace(/\s/g,'')}`).link.contacts-list__link.contacts-addresses__tel=address.tel
