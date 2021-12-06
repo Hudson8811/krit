@@ -6,4 +6,12 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   header();
+
+  if (document.querySelector('.news-slider')) {
+    newsSlider();
+  }
+
+  if (document.querySelector('.team-slider')) {
+    teamSlider();
+  }
 });

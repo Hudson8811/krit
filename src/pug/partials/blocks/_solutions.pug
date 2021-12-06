@@ -3,7 +3,7 @@ mixin solutions(content)
   section.solutions(class=classList id=content.id?content.id:'solutions')
     .container
       .solutions-wrapper
-        h2.title.solutions__title=content.title
+        h2.title.section-title.solutions__title=content.title
 
         .solutions-grid
           each card in content.cards

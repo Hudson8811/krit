@@ -3,7 +3,7 @@ mixin services(content)
   section.services(class=classList id=content.id?content.id:'services')
     .container
       .services-wrapper
-        h2.title.services__title=content.title
+        h2.title.section-title.services__title=content.title
 
         .services-grid
           each card in content.cards

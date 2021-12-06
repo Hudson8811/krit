@@ -1,0 +1,63 @@
+.slider {
+  position: relative;
+
+  @include max("sm") {
+    padding-bottom: 50px;
+  }
+
+  &-button {
+    position: absolute;
+    top: 50%;
+    z-index: 80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    @include max("sm") {
+      top: auto;
+      bottom: 0;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+
+      svg {
+        path {
+          fill: $greyDark;
+        }
+      }
+    }
+
+    &--prev {
+      left: -56px;
+      transform: rotate(180deg);
+
+      @include max("lg") {
+        left: -50px;
+      }
+
+      @include max("sm") {
+        left: auto;
+        right: 50%;
+      }
+    }
+
+    &--next {
+      right: -56px;
+
+      @include max("lg") {
+        right: -50px;
+      }
+
+      @include max("sm") {
+        left: 50%;
+        right: auto;
+      }
+    }
+  }
+}

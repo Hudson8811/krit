@@ -5,6 +5,7 @@ include ../partials/blocks/_about
 include ../partials/blocks/_cover
 include ../partials/blocks/_services
 include ../partials/blocks/_solutions
+include ../partials/blocks/_news
 
 block vars
   -
@@ -77,6 +78,52 @@ block vars
             },
           ],
         },
+        news: {
+          id: 'news',
+          title: 'Новости',
+          cards: [
+            {
+              link: '#',
+              image: { src: 'news/news-1.jpg', alt: '' },
+              text: { short: 'Сервис-Телеком объявляет о достижении соглашения с VEON...' },
+            },
+            {
+              link: '#',
+              image: { src: 'news/news-2.jpg', alt: '' },
+              text: { short: 'ГК «Сервис-Телеком» приобрела портфель «Нева Телеком» и договорилась...' },
+            },
+            {
+              link: '#',
+              image: { src: 'news/news-3.jpg', alt: '' },
+              text: { short: 'ГК «Сервис-Телеком» приняла участие в Форуме операторов и поставщиков...' },
+            },
+            {
+              link: '#',
+              image: { src: 'news/news-4.jpg', alt: '' },
+              text: { short: 'Сервис-Телеком объявляет о достижении соглашения с VEON...' },
+            },
+            {
+              link: '#',
+              image: { src: 'news/news-1.jpg', alt: '' },
+              text: { short: 'Сервис-Телеком объявляет о достижении соглашения с VEON...' },
+            },
+            {
+              link: '#',
+              image: { src: 'news/news-2.jpg', alt: '' },
+              text: { short: 'ГК «Сервис-Телеком» приобрела портфель «Нева Телеком» и договорилась...' },
+            },
+            {
+              link: '#',
+              image: { src: 'news/news-3.jpg', alt: '' },
+              text: { short: 'ГК «Сервис-Телеком» приняла участие в Форуме операторов и поставщиков...' },
+            },
+            {
+              link: '#',
+              image: { src: 'news/news-4.jpg', alt: '' },
+              text: { short: 'Сервис-Телеком объявляет о достижении соглашения с VEON...' },
+            },
+          ],
+        },
       },
     };
 
@@ -86,4 +133,5 @@ block main
   +cover(page.content.cover)
   +services(page.content.services)
   +solutions(page.content.solutions)
+  +news(page.content.news)
     

@@ -1,0 +1,20 @@
+mixin news(content)
+  - classList = `${content.firstBlock?'first-block':''} ${content.mod?'bg-'+content.mod:''}`;
+  section.news(class=classList id=content.id?content.id:'news')
+    .container
+      .news-wrapper
+        h2.title.section-title.news__title=content.title
+
+        .slider
+          .swiper.news-slider
+            .swiper-wrapper
+              each card in content.cards
+                a(href=card.link?card.link:'#').swiper-slide.news-card
+                  .news-card__image
+                    img(src=`images/${card.image.src}`, alt=card.image.alt?card.image.alt:'').news-card__image-item
+                  
+                  .news-card__content
+                    p.news-card__content-text!=card.text.short
+          
+          +sliderButton('prev', 'news-slider__button')
+          +sliderButton('next', 'news-slider__button')
